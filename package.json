@@ -1,6 +1,7 @@
 {
   "name": "portfoliosndversion",
   "private": true,
+  "homepage": "https://marcomaraglino.it",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
