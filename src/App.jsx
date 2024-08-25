@@ -9,7 +9,7 @@ import Social from "./pages/social.jsx";
 function App() {
     return (
         <>
-            <BrowserRouter>
+            <BrowserRouter basename="/portfoliov2">
                 <Routes>
                     <Route path="/" element={<Layout/>}>
                         <Route index element={<Home/>}/>
