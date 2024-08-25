@@ -7,5 +7,5 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify('1.0.0'),
   },
-  base: '/portfoliowebsite/'
+  base: '/portfoliov2/'
 })
