@@ -3,7 +3,7 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
     return (
         <>
-        <div className="flex flex-col container max-sm:w-72 mx-auto w-screen">
+        <div className="flex flex-col container max-sm:w-72 mx-auto w-screen h-full">
             <div className="flex flex-col absolute container max-sm:w-72 top-10 pb-10 w-full py-4">
             <div className="flex justify-between">
                 <Link to="/" className="font-normal text-base mb-4">marco maraglino</Link>
