@@ -8,7 +8,7 @@ import Social from "./pages/social.jsx";
 
 function App() {
     return (
-        <>
+        <div>
             <BrowserRouter>
                 <Routes>
                     <Route path="/" element={<Layout/>}>
@@ -19,7 +19,7 @@ function App() {
                     </Route>
                 </Routes>
             </BrowserRouter>
-        </>
+        </div>
     )
 }
 

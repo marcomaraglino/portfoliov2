@@ -1,4 +1,8 @@
 import { motion } from 'framer-motion';
+import { Button } from "@/src/components/ui/button"
+import { Mail } from 'lucide-react';
+import { Github } from 'lucide-react';
+ 
 const Home = () => {
     return (
         <motion.div
@@ -12,7 +16,18 @@ const Home = () => {
                 and an insatiable thirst for new experiences. With a deep love for coding and a penchant for
                 exploration, I'm constantly pushing the boundaries of what's possible in the world of technology. Join
                 me on my journey as I embrace challenges, seek innovation, and uncover exciting new horizons</p>
-                <a className="text-left font-normal underline transition-all hover:text-blue-600 hover:transition" href="mailto:marcomaraglino5@gmail.com">contact me marcomaraglino5@gmail.com</a>
+            </div>
+            <div className='flex gap-2 mt-5'>
+                <Button className='rounded-xl' variant='outline' 
+                onClick={() => window.open('mailto:marcomaraglino5@gmail.com')}>
+                    <Mail/>
+                    Email
+                </Button>
+                <Button className='rounded-xl' variant='outline' 
+                onClick={() => window.open('https://github.com/marcomaraglino', '_blank')}>
+                    <Github/>
+                    GitHub
+                </Button>
             </div>
         </div>
         </motion.div>
