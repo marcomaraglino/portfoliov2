@@ -32,8 +32,7 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="container min-h-screen">
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-1/2 max-sm:w-72">
+            <div>
                     {projectsData.map((project, index) => (
                         <ProjectCard 
                             key={index}
@@ -41,7 +40,6 @@ const Projects = () => {
                         />
                     ))}
                 </div>
-            </div>
         </motion.div>
     );
 };

@@ -8,7 +8,7 @@ import Header from "./components/Header.jsx";
 
 const Layout = () => {
   return (
-    <div className="w-full px-20">
+    <div className="w-full px-20 max-md:px-20">
       <Header />
       <Outlet />
     </div>

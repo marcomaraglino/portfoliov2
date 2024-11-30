@@ -23,8 +23,7 @@ const Work = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-        <div className="container min-h-screen">
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-1/2 max-sm:w-auto">
+        <div>
             {projectsData.map((project, index) => (
                         <ProjectCard 
                             key={index}
@@ -32,7 +31,6 @@ const Work = () => {
                         />
                     ))}
             </div>
-        </div>
         </motion.div>
     );
 };
