@@ -18,6 +18,13 @@ const Projects = () => {
             techStack: ["Electronics", "C++", "Matlab"]
         },
         {
+            imageUrl: "./telemetry.png",
+            title: "Formula Student Telemetry System",
+            description: "Developed a real-time telemetry system for Formula Student race car using MQTT protocol. The system continuously monitors critical vehicle parameters including temperature, acceleration, and engine data, transmitting them to a central dashboard for real-time analysis and performance optimization.",
+            link: "",
+            techStack: ["Python", "MQTT", "Electronics"]
+        },
+        {
             imageUrl: "./qr_code.webp",
             title: "QR Code to Apple Wallet Ticket Conversion Script",
             description: "I am currently developing a script that converts QR code inputs into tickets compatible with Apple Wallet. This project involves automating the process of generating digital passes, enhancing the user experience for seamless ticket management on iOS devices.",
@@ -32,14 +39,14 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div>
-                    {projectsData.map((project, index) => (
-                        <ProjectCard 
-                            key={index}
-                            {...project}
-                        />
-                    ))}
-                </div>
+            <div className="grid grid-cols-1 gap-6 md:w-1/2">
+                {projectsData.map((project, index) => (
+                    <ProjectCard 
+                        key={index}
+                        {...project}
+                    />
+                ))}
+            </div>
         </motion.div>
     );
 };

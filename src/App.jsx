@@ -5,12 +5,16 @@ import Home from "./pages/home.jsx";
 import Work from "./pages/work.jsx";
 import Social from "./pages/social.jsx";
 import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
 
 const Layout = () => {
   return (
-    <div className="w-full px-20 max-md:px-10">
+    <div className="w-full px-20 max-md:px-10 min-h-screen flex flex-col">
       <Header />
-      <Outlet />
+      <main className="flex-grow">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };

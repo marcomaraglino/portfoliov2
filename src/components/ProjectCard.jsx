@@ -70,7 +70,7 @@ const ProjectCard = ({
     return (
         <div 
             onClick={() => window.open(link)}
-            className="hover:border-indigo-50 transition-all cursor-pointer rounded-3xl border mb-4 border-indigo-50/40 p-6"
+            className="hover:border-indigo-50 transition-all cursor-pointer rounded-3xl border border-indigo-50/40 p-6"
         >
             <img 
                 src={imageUrl} 

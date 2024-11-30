@@ -24,12 +24,14 @@ const Work = () => {
             exit={{ opacity: 0 }}
         >
         <div>
+        <div className="grid grid-cols-1 gap-6 md:w-1/2">
             {projectsData.map((project, index) => (
                         <ProjectCard 
                             key={index}
                             {...project}
                         />
                     ))}
+            </div>
             </div>
         </motion.div>
     );
