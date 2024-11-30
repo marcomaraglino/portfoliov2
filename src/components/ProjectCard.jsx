@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 
 // Tech stack color mapping
@@ -61,6 +62,8 @@ const ProjectCard = ({
     link, 
     techStack = [] 
 }) => {
+    const [isLoading, setIsLoading] = useState(true); // State to track image loading
+
     const getTechColor = (tech) => {
         // Convert to lowercase for case-insensitive matching
         const techLower = tech.toLowerCase();
@@ -72,10 +75,14 @@ const ProjectCard = ({
             onClick={() => window.open(link)}
             className="hover:border-indigo-50 transition-all cursor-pointer rounded-3xl border border-indigo-50/40 p-6"
         >
+            {isLoading && (
+                <div className="h-40 bg-gray-300 animate-pulse rounded-2xl" /> // Skeleton loading
+            )}
             <img 
                 src={imageUrl} 
                 alt={title}
-                className="rounded-2xl object-cover w-full h-40"
+                className={`rounded-2xl object-cover w-full h-40 ${isLoading ? 'hidden' : 'block'}`}
+                onLoad={() => setIsLoading(false)} // Set loading to false when image loads
             />
             <h2 className="text-base text-left text-white mt-2">
                 {title}
