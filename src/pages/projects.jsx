@@ -8,7 +8,7 @@ const Projects = () => {
             title: "Sirio Finance",
             description: "I am currently developing the front-end for a lending protocol built on Hedera. This project involves crafting a user-friendly interface for seamless borrowing and lending experiences, with a focus on optimizing the interaction flow and visual design.",
             link: "https://new-ui.sirio.finance",
-            techStack: ["Vue", "Tailwind"]
+            techStack: ["Vue", "Tailwind", "TypeScript", "RESTful"]
         },
         {
             imageUrl: "./polibacorse.webp",
@@ -22,7 +22,7 @@ const Projects = () => {
             title: "QR Code to Apple Wallet Ticket Conversion Script",
             description: "I am currently developing a script that converts QR code inputs into tickets compatible with Apple Wallet. This project involves automating the process of generating digital passes, enhancing the user experience for seamless ticket management on iOS devices.",
             link: "",
-            techStack: ["Python", "Apple Wallet API"]
+            techStack: ["Python", "Apple Wallet API", "Javascript"]
         }
     ];
 
@@ -32,7 +32,7 @@ const Projects = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
         >
-            <div className="container py-56">
+            <div className="container min-h-screen">
                 <div className="grid grid-cols-1 md:grid-cols-1 gap-8 w-1/2 max-sm:w-72">
                     {projectsData.map((project, index) => (
                         <ProjectCard 

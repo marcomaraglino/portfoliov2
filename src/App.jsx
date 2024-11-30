@@ -1,26 +1,47 @@
 import './App.css'
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Layout from "./pages/Layout.jsx";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Projects from "./pages/projects.jsx";
 import Home from "./pages/home.jsx";
 import Work from "./pages/work.jsx";
 import Social from "./pages/social.jsx";
+import Header from "./components/Header.jsx";
+
+const Layout = () => {
+  return (
+    <div className="w-full px-20">
+      <Header />
+      <Outlet />
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "work",
+        element: <Work />,
+      },
+      {
+        path: "projects",
+        element: <Projects />,
+      },
+      {
+        path: "social",
+        element: <Social />,
+      },
+    ],
+  },
+]);
 
 function App() {
-    return (
-        <div>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/" element={<Layout/>}>
-                        <Route index element={<Home/>}/>
-                        <Route path="work" element={<Work/>}/>
-                        <Route path="projects" element={<Projects/>}/>
-                        <Route path="social" element={<Social/>}/>
-                    </Route>
-                </Routes>
-            </BrowserRouter>
-        </div>
-    )
+  return <RouterProvider router={router} />;
 }
 
-export default App
+export default App;
